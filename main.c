@@ -45,22 +45,22 @@ int main(int argc, char *argv[])
   while (1) {
     scanf("%s", string);
     if (isnumber(string) == 0) {
-      fprintf(stderr, "Error: Chybny vstup!\n");
+      fprintf(stderr, "Error: Wrong input!\n");
       return 100;
     }
     data = atoll(string);
     if (data <= 0) {
       if (data < 0) {
-          fprintf(stderr, "Error: Chybny vstup!\n");
+          fprintf(stderr, "Error: Wrong input!\n");
           return 100;
       }
       break;
     }
     if (data == 1) {
-			printf("Prvociselny rozklad cisla 1 je:\n1\n");
+			printf("Prime factorization of 1 is:\n1\n");
 			continue;
 		}
-    printf("Prvociselny rozklad cisla %lld je:\n", data);
+    printf("Prime factorization of %lld is:\n", data);
     //creating new array with prime factorization of data number
     int temp_prime_number_array[(int)sqrt(n)];
     memset(temp_prime_number_array, 0, sizeof temp_prime_number_array);
